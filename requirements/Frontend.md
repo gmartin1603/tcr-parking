@@ -17,8 +17,14 @@
 ### Concession Stand Worker
 - As a concession stand worker, I want to see the food orders that need to be prepared so that I can prepare the food orders.
 - As a concession stand worker, I want to scan a QR code provided by the customer to mark the order as picked up and tell me what order to give the customer.
+- As a concession stand worker, I want multiple ways to identify the customer's order so that I can ensure that the correct order is given to the customer.
+- As a concession stand worker, I want an easy way to note issues so accruate data is tracked and issues are corrected.
+- As a concession stand worker, I want a clean low clutter interface for the order queue so that I can quickly and easily see what needs to be done.
+- As a concession stand worker, I want to be able to see orders that have been picked up but NOT on the same screen as orders that are still waiting to be picked up.
 
 ### Admin
+- As an admin, I want to track remade orders and the reason for the remake so that I can see if there is a pattern of remade orders.
+
 
 
 ## Wireframes

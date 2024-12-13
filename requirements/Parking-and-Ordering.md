@@ -35,6 +35,8 @@ The platform will allow customers to reserve a parking spot advance and after pa
 - Manage donor status
 - Manage the consession stand menu
 - View current and historical reports.
+- Track privously denied VIP/Donor requests.
+- Track remade orders and the reason for the remake so that they can see if there is a pattern of remade orders. E.g. "Customers order is picked up by name then someone else comes for an order with a code for the order."
 
 
 ## Frontend
