@@ -1,6 +1,6 @@
 # TCR Parking and Advance Ordering Platform
-## Introduction
 
+## Introduction
 The TCR Parking and Advance Ordering Platform is an end to end system for managing the preferred parking lot spaces and allows customers to order their drinks, snacks, and/or merchandise for pickup before the show and/or durning intermission.
 
 The platform will allow customers to reserve a parking spot advance and after parking if available. The parking lot attendant will have a specialized view that will allow them to see the parking spots that are reserved and the parking spots that are available. The platform will also allow customers to order their drinks, snacks, and/or merchandise for pickup before the show and/or durning intermission. The platform will provide customers with a unique order number that they can use to pick up their food. 
@@ -38,10 +38,30 @@ The platform will allow customers to reserve a parking spot advance and after pa
 - Track privously denied VIP/Donor requests.
 - Track remade orders and the reason for the remake so that they can see if there is a pattern of remade orders. E.g. "Customers order is picked up by name then someone else comes for an order with a code for the order."
 
+## User Stories
 
-## Frontend
+### Customer
+- As a customer, I want to reserve a parking spot in advance so that I can have a guaranteed spot when I arrive.
+- As a customer, I want to order my food in advance so that I can skip the line at the concession stand.
+- As a customer, I want to see my parking spot reservation and food order so that I can verify that it is correct.
+- As a customer, I want to see the number of parking spots that are available so that I can know if I can drive up and park.
+- As a customer, I want to pay for my parking spot and/or food order in advance so that I can have a contactless experience.
+- As a customer, I want the parking attendant to be able to assist me with paying for my parking spot after I've parked.
 
-The frontend will be a web application that will be used by customers to reserve a parking spot and order food. The frontend will also be used by parking lot attendants to see the parking spots that are reserved and the parking spots that are available. The frontend will also be used by concession stand workers to see the food orders that need to be prepared.
+### Parking Lot Attendant
+- As a parking lot attendant, I want to see the parking spots that are reserved and the parking spots that are available so that I can direct customers to the correct parking spot.
+- As a parking lot attendant, I want to see the number of parking spots that are available so that I can know how many drive up spaces can be sold.
+
+### Concession Stand Worker
+- As a concession stand worker, I want to see the food orders that need to be prepared so that I can prepare the food orders.
+- As a concession stand worker, I want to scan a QR code provided by the customer to mark the order as picked up and tell me what order to give the customer.
+- As a concession stand worker, I want multiple ways to identify the customer's order so that I can ensure that the correct order is given to the customer.
+- As a concession stand worker, I want an easy way to note issues so accruate data is tracked and issues are corrected.
+- As a concession stand worker, I want a clean low clutter interface for the order queue so that I can quickly and easily see what needs to be done.
+- As a concession stand worker, I want to be able to see orders that have been picked up but NOT on the same screen as orders that are still waiting to be picked up.
+
+### Admin
+- As an admin, I want to track remade orders and the reason for the remake so that I can see if there is a pattern of remade orders.
 
 ## Backend
 
@@ -61,13 +81,15 @@ The data model will consist of the following entities:
 
 ## Tech Stack
 
-- React
+- Vue3
 - Node.js
 - Express
 - MongoDB
 - Square POS API
 - Firebase Auth
 - Firebase Firestore
+- Firebase Storage
+- Firebase Realtime Database
 - Firebase Functions
 - Firebase Hosting
 
