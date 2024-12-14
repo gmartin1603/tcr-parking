@@ -33,9 +33,9 @@ The platform will allow customers to reserve a parking spot advance and after pa
 ### Admin Portal
 - Admin portal view for administrators to see the parking spots that are reserved and the parking spots that are available
 - Manage donor status
-- Manage the consession stand menu
+- Manage the concession stand menu
 - View current and historical reports.
-- Track privously denied VIP/Donor requests.
+- Track previously denied VIP/Donor requests.
 - Track remade orders and the reason for the remake so that they can see if there is a pattern of remade orders. E.g. "Customers order is picked up by name then someone else comes for an order with a code for the order."
 
 ## User Stories
