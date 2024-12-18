@@ -56,7 +56,7 @@ The platform will allow customers to reserve a parking spot advance and after pa
 - As a concession stand worker, I want to see the food orders that need to be prepared so that I can prepare the food orders.
 - As a concession stand worker, I want to scan a QR code provided by the customer to mark the order as picked up and tell me what order to give the customer.
 - As a concession stand worker, I want multiple ways to identify the customer's order so that I can ensure that the correct order is given to the customer.
-- As a concession stand worker, I want an easy way to note issues so accruate data is tracked and issues are corrected.
+- As a concession stand worker, I want an easy way to note issues so accurate data is tracked and issues are corrected.
 - As a concession stand worker, I want a clean low clutter interface for the order queue so that I can quickly and easily see what needs to be done.
 - As a concession stand worker, I want to be able to see orders that have been picked up but NOT on the same screen as orders that are still waiting to be picked up.
 
@@ -80,8 +80,39 @@ The platform will allow customers to reserve a parking spot advance and after pa
 
 ## ROI / Business Case
 
-- Increase the number of parking spots sold
-- Increase the amount of concessions sold
-- Better customer experience
+- Real time tracking of parking spots makes it easy for attendants to know how many "drive up" spots to sell, increasing the number of parking spots sold per show.
+
+- Increase the amount of concessions sold.
+  - **Research revenue change noticed from theaters that have implemented a similar system**
+  - From: [AgileTix.com](https://www.agiletix.com/post/lights-camera-snacks-7-ingenious-ways-theatres-can-boost-concession-sales)
+    ```
+      In today's digital age, convenience is key. Implementing mobile ordering technology allows customers to browse the concession menu, place orders, and pay from their smartphones. This not only reduces wait times and enhances the overall customer experience but also encourages larger orders as customers can easily add items to their cart with a few taps. 
+    ```
+  - From: [SoftJourn.com](https://softjourn.com/insights/5-reasons-to-add-contactless-ordering-to-your-ticketing-process)
+    ```
+      Customers love contactless ordering because of its convenience. Forty-four percent of Americans cited convenience as the most important factor for ordering and paying for food and merchandise with their phone.  
+    ```
+    * Citation: Appetize and SurveyMonkey. (2020, November 18). [Appetize Contactless Survey Reveals Customer Trends and Preferences](https://www.vendingmarketwatch.com/technology/news/21163242/appetize-contactless-technology-survey-reveals-customer-trends-and-preferences).
+
+- Increase the percentage of customers that order concessions per show.
+  - **Research changes in the number of customers ordering noticed from theaters that have implemented a similar system**
+  - From: [SoftJourn.com](https://softjourn.com/insights/5-reasons-to-add-contactless-ordering-to-your-ticketing-process)
+  ```
+    The Demand for Contactless and Cashless Experiences
+    Contactless ordering isn't merely a convenience; it's a shift towards safer and more hygienic practices. However, catering to diverse preferences remains a challenge. Still, some of the biggest problems for fans are long lines, slow service and errors in food and drink orders.  
+  ```
+  - From: [VendingMarketWatch.com](https://www.vendingmarketwatch.com/technology/news/21163242/appetize-contactless-technology-survey-reveals-customer-trends-and-preferences)
+    ```
+      The No. 1 reason why fans like to use mobile ordering in stadiums? Avoiding waiting in concession lines (39%). 30% Americans responded “convenience of ordering food/beverage directly from their seat”, and 17% said mobile ordering “helps avoid contact with staff.”
+    ```
+  - From: [SoftJourn.com](https://softjourn.com/insights/5-reasons-to-add-contactless-ordering-to-your-ticketing-process)
+    ```
+      The prevalence of mobile ticketing and payment systems has reached an all-time high in stadiums nationwide, with mobile ordering not far behind. At BC Place in Vancouver, Centerplate has introduced in-seat mobile ordering for 1,500 exclusive club-level seats, achieving an impressive 26% adoption rate. 
+    ```
+
+- Increase and speed up concession sales during intermission.
+  - Customers will be able to put in intermission orders as soon as pre-show ordering closes. The advance orders will lighten the load on the lobby and lounge during intermission speeding up the process and providing a better experience for all customers.
+ 
+
 
 

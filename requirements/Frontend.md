@@ -26,6 +26,12 @@ The frontend will be a web application that will be used by customers to reserve
 - Concessions Order
   - ![Concessions Order](./wireframes/ConcessionsOrder.png)
 
+- Concessions Order (Expanded)
+  - ![Concessions Order (Expanded)](./wireframes/ConcessionsOrderExpanded.png)
+
+- Concessions Order Payment
+  - ![Concessions Order Payment](./wireframes/ConcessionsOrderPayment.png)
+
 - Order Fulfillment Queue
   - ![Order Fulfillment Queue](./wireframes/OrderFulfillmentQueue.png)
 
