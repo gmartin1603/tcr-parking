@@ -51,6 +51,8 @@ The platform will allow customers to reserve a parking spot advance and after pa
 ### Parking Lot Attendant
 - As a parking lot attendant, I want to see the parking spots that are reserved and the parking spots that are available so that I can direct customers to the correct parking spot.
 - As a parking lot attendant, I want to see the number of parking spots that are available so that I can know how many drive up spaces can be sold.
+- As a parking lot attendant, I want to add VIP/Donors to the system with a pending status so that they can have VIP privileges until their status is confirmed by an admin.
+- As a parking lot attendant, I want a very prominent warning from the system when no more "drive up" spots can be sold so that I can inform customers and change the sign to "Pre-Order Only".
 
 ### Concession Stand Worker
 - As a concession stand worker, I want to see the food orders that need to be prepared so that I can prepare the food orders.
@@ -62,6 +64,11 @@ The platform will allow customers to reserve a parking spot advance and after pa
 
 ### Admin
 - As an admin, I want to track remade orders and the reason for the remake so that I can see if there is a pattern of remade orders.
+- As an admin, I want to track previously denied VIP/Donor requests so that I can see if there is a pattern of denied requests.
+- As an admin, I want to manage the concession stand menu so that I can add, remove, and update items.
+- As an admin, I want to manage donor status so that I can grant VIP privileges to donors.
+- As an admin, I want to view current and historical reports so that I can see how the system is being used.
+- As an admin, I want to view reports on the number of parking spots that are filled per show.
 
 
 ## Tech Stack
