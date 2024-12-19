@@ -1,6 +1,7 @@
 ## Frontend
+The frontend will consist of a web application that will be used by customers to reserve a parking spots and place advance orders. 
 
-The frontend will be a web application that will be used by customers to reserve a parking spot and order food. The frontend will also be used by parking lot attendants to see the parking spots that are reserved and the parking spots that are available. The frontend will also be used by concession stand workers to see the food orders that need to be prepared.
+A separate web application installed on local devices will be used by parking lot attendants and concession stand workers.
 
 ## Blueprint
 ### CMS Modules
@@ -14,6 +15,12 @@ The frontend will be a web application that will be used by customers to reserve
 
 
 ## Wire Frames
+- Create Account
+  - ![Create Account](./wireframes/CreateAccount.png)
+
+- Login
+  - ![Login](./wireframes/Login.png)
+
 - Parking Overview
   - ![Parking Overview](./wireframes/ParkingOverview.png)
 
@@ -47,5 +54,15 @@ The frontend will be a web application that will be used by customers to reserve
 - Order Pick Up Queue (Expanded)
   - ![Order Pick Up Queue (Expanded)](./wireframes/OrderPickUpQueueExpanded.png)
 
+- Refund/Substitute Order/Item
+  - ![Refund Order/Item](./wireframes/RefundOrderItem.png)
+
 - Admin Dashboard
   - ![Admin Dashboard](./wireframes/AdminDashboard.png)
+
+- Reports Dashboard
+  - ![Reports Dashboard](./wireframes/ReportsDashboard.png)
+
+- Add/Edit Menu Item
+  - ![Add/Edit Menu Item](./wireframes/AddEditMenuItem.png)
+
