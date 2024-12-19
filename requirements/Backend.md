@@ -1,14 +1,20 @@
 ## Backend
 
-The backend will be a RESTful API that will be used by the frontend to reserve a parking spot and order food. The backend will also be used by parking lot attendants to see the parking spots that are reserved and the parking spots that are available. The backend will also be used by concession stand workers to see the food orders that need to be prepared.
+The backend consist of a RESTful API that will be used by the customer and worker frontends to update the database, a worker service to sychronize the database with the ticketing system, and a reporting service to generate reports.
+
+A relational database will be used in conjunction with a NoSQL database to store the data.
 
 ### Data Model
+
 The data model will consist of the following entities:
 
-- Customer
 - Parking Spot
 - Food Order
+  * MongoDB (Firestore)
 - Parking Spot Reservation
 - Food Order Queue
-- Parking Lot Attendant
-- Concession Stand Worker
+- User
+  * Customer
+  * Concession Stand Worker
+  * Parking Lot Attendant
+  * Admin
