@@ -39,3 +39,7 @@
 * $1000 after the design phase
 * $1000 after the development phase
 * $500 after successful production testing
+
+### Advertising/Promotion:
+* Martin Solutions LLC will be listed as the developer of the Advance Ordering and Parking Platform on the customer's website and in any promotional materials.
+* Martin Solutions LLC will be allowed to use the customer's name and logo in connection with the project on the Martin Solutions LLC website portfolio.
