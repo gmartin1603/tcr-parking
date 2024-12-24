@@ -3,6 +3,12 @@ The frontend will consist of a web application that will be used by customers to
 
 A separate web application installed on local devices will be used by parking lot attendants and concession stand workers.
 
+### Tech Stack
+- Vue3
+- Node.js
+- Firebase Auth - Google, Phone, Email
+- Firebase Hosting
+
 ## Blueprint
 ### CMS Modules
 - User Authentication
