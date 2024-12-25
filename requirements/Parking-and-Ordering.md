@@ -3,30 +3,34 @@
 ## Introduction
 The TCR Parking and Advance Ordering Platform is an end to end system for managing the preferred parking lot spaces and allows customers to order their drinks, snacks, and/or merchandise for pickup before the show and/or durning intermission.
 
-The platform will allow customers to reserve a parking spot advance and after parking if available. The parking lot attendant will have a specialized view that will allow them to see the parking spots that are reserved and the parking spots that are available. The platform will also allow customers to order their drinks, snacks, and/or merchandise for pickup before the show and/or durning intermission. The platform will provide customers with a unique order number that they can use to pick up their food. 
+The platform will allow customers to reserve a parking spot advance and after parking if available. The parking lot attendant will have a specialized view that will allow them to see the parking spots that are reserved and the parking spots that are available. The platform will also allow customers to order their drinks, snacks, and/or merchandise for pickup before the show and/or durning intermission. The platform will provide customers with a unique order number that they can use to pick up their order and a link for updating order and checking status. 
 
 ## Features
-- Customers can pay for their parking spot and/or food order in advance
-- Integration with existing Square POS payment system.
+- Customers can reserve and pay for their parking spot in advance.
+- Customers can order their drinks, snacks, and/or merchandise for pickup before the show and/or durning intermission.
+- Real time tracking of parking spots and orders.
 - Automated syncing of parking spaces, merchandise, and concessions sold with tickets.
+- Integration with existing Square POS payment system.
+- User accounts and views for Admin, Parking Lot Attendant, and Concession Stand Worker.
+- Admin portal for managing the system and viewing reports.
 
 ### Parking Lot Reservation
 - Customers can reserve a parking spot in advance
+- Customer portal view for customers to see their parking spot confirmation.
 - Flier with a QR code is given to "drive up" customers to scan that will direct them to the payment portal.
 - Customers can also pay by card with the parking lot attendant after parking if available.
-- Customer portal view for customers to see their parking spot reservation and food order
 - Tracking of preferred donors that have reserved parking spots for the current show.
 
 - Parking lot attendant view for parking lot attendants to see the parking spots that are reserved and the parking spots that are available
 - Provides the parking lot attendant with real time parking space availability making it easier know how many drive up spaces can be sold.
-- Parking space types: General, Handicap, and VIP/Donor
 - Provides the parking lot attendant with a way of adding VIP/Donors to the system with a pending status that will grant them VIP privileges until their status is confirmed by an admin.
+- Parking space types: General, Handicap, and VIP/Donor
 
 ### Advance Concession Stand Ordering
 - Customers can order drinks, snacks, and/or merchandise for pickup before the show and/or durning intermission
 - Shortens time customers spend in line at the concession stand.
 - Provides customers with a unique order number that they can use to pick up their food.
-
+- Customer receives a link for updating order and checking status.
 - Concession stand order queue view for concession stand workers to see the food orders that need to be prepared.
 - On pickup, a QR code provided by the customer is scanned to mark the order as picked up and tell the worker what order to give the customer.
 
@@ -109,7 +113,22 @@ The platform will allow customers to reserve a parking spot advance and after pa
 
 - From my research on similar system adoption by other venues and experience as an employee at TCR I think it's reasonable to expect a 10% increase in concessions sold per show as a direct result of the system. This is based on the fact that the system will make it easier for customers to order and pay for concessions. Ordering systems like this inherently make it easier for customers to place larger and/or more complex orders compared to ordering at the counter which can lead to an increase in the average order size.
 
+Current estimates are that 50% of a total of 550 customers order concessions at TCR. Assuming that the current average order is $12, 18% of the total customers use the advance ordering system (60% of these are in addition to the 50% overall order rate) and the average advance order is $15:
+
+* Current Concession Sales: 550 customers * 50% order rate * $12 average order = $3,300
+* Advance Order Sales: 550 customers * 18% advance order rate * $15 average order = $1,485
+* Total Concession Sales: $3,300 + $1,485 = $4,785
+* Increase in Concession Sales: $1,485 / $3,300 = 45%
+
 ### Key Performance Indicators
 - Number of parking spots sold per show
 - Total sale of concessions per show
 - Number of customers that order concessions per show
+
+## Potential Future Features (Not in Scope or Estimate of this Phase)
+- Customer accounts, (profile, order history, etc.)
+  - Rewards program
+  - Discount/Coupon/Promo Codes (e.g. Sippy Cup Refill, Free Sticker with $30 order, etc.)
+
+- Inventory Management
+  - Track inventory of concessions and merchandise

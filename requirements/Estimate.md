@@ -1,6 +1,6 @@
 # Estimate
 
-### Phase Breakdown
+## Phase Breakdown
 
 | Phase       | Description                                                                       | Time Est | Est Completion |
 | :---------- | :-------------------------------------------------------------------------------- | :------- | :------------- |
@@ -9,7 +9,7 @@
 | Testing     | Automated testing pipeline construction and system testing                        | 28 hrs   | 3/04/25        |
 | Deployment  | Design, construct, and execute deployment pipeline                                | 16 hrs   | 3/05/25        |
 
-### Task Breakdown
+## Task Breakdown
 
 | Phase       | Task                  | Description                                                     | Time Est | Status      |
 | :---------- | :-------------------- | :-------------------------------------------------------------- | :------- | :---------- |
@@ -31,13 +31,11 @@
 * Total Time Estimate: 186 hours
 * Go Live Date: 3/06/25 - "Rock of Ages" concert
 
-### Cost Estimate
-* Total Cost Estimate: $3000
-
 ### Project Quote: 
 * $3000 & advertising/promotion of Martin Solutions LLC in connection with the Advance Ordering and Parking Platform.
   - Covers the design, development, testing and deployment of the system as well as the first year of hosting and maintenance.
   - Hosting and maintenance plans after the first year available starting at $500/year.
+  - Additional features and enhancements available as a later phase to be addressed with a separate project.
 
 ### Payment Schedule:
 * $500 deposit to start the project
@@ -48,3 +46,11 @@
 ### Advertising/Promotion:
 * Martin Solutions LLC will be listed as the developer of the Advance Ordering and Parking Platform on the customer's website and in any promotional materials.
 * Martin Solutions LLC will be allowed to use the customer's name and logo in connection with the project on the Martin Solutions LLC website portfolio.
+
+## Hosting and Support Services:
+* Maintenance and monitoring of deployed services.
+* Data backups and redundant systems to ensure data integrity.
+* Technical support for system issues.
+* Priority & savings on feature requests and system enhancements.
+* Periodic system updates and security patches.
+* Starting at $500/year, price may vary based on system requirements and usage.
