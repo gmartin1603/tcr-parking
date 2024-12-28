@@ -34,11 +34,11 @@
 ### Project Quote: 
 * $3000 & advertising/promotion of Martin Solutions LLC in connection with the Advance Ordering and Parking Platform.
   - Covers the design, development, testing and deployment of the system as well as the first year of hosting and maintenance.
-  - Hosting and maintenance plans after the first year available starting at $500/year.
-  - Additional features and enhancements available as a later phase to be addressed with a separate project.
+  - Hosting and maintenance plans after the first year are available starting at $500/year.
+
 
 ### Payment Schedule:
-* $500 deposit to start the project
+* $500 deposit when project is approved
 * $1000 after the design phase
 * $1000 after the development phase
 * $500 after successful production testing
@@ -53,12 +53,12 @@
 * Technical support for system issues.
 * Priority & savings on feature requests and system enhancements.
 * Periodic system updates and security patches.
-* Starting at $500/year, cloud service usage limits outlined below.
+* Starting at $500/year, cloud service usage limits for this level are outlined below.
   - Active Users: 50k/month Then $60 per 10k users/month
-  - Hosting: 30GB/month
+  - Hosting: 25GB/month
   - Storage: 50GB
   - Firestore Data: 50GB
   - Backup Data: 150GB 
-  - Firestore Operations: 5M/month
-  - Functions Invocations: 50M/month
+  - Firestore Operations: 3M/month
+  - Functions Invocations: 40M/month
 

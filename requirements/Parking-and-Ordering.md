@@ -6,13 +6,9 @@ The TCR Parking and Advance Ordering Platform is an end to end system for managi
 The platform will allow customers to reserve a parking spot advance and after parking if available. The parking lot attendant will have a specialized view that will allow them to see the parking spots that are reserved and the parking spots that are available. The platform will also allow customers to order their drinks, snacks, and/or merchandise for pickup before the show and/or durning intermission. The platform will provide customers with a unique order number that they can use to pick up their order and a link for updating order and checking status. 
 
 ## Features
-- Customers can reserve and pay for their parking spot in advance.
-- Customers can order their drinks, snacks, and/or merchandise for pickup before the show and/or durning intermission.
-- Real time tracking of parking spots and orders.
 - Automated syncing of parking spaces, merchandise, and concessions sold with tickets.
 - Integration with existing Square POS payment system.
 - User accounts and views for Admin, Parking Lot Attendant, and Concession Stand Worker.
-- Admin portal for managing the system and viewing reports.
 
 ### Parking Lot Reservation
 - Customers can reserve a parking spot in advance
@@ -24,11 +20,9 @@ The platform will allow customers to reserve a parking spot advance and after pa
 - Parking lot attendant view for parking lot attendants to see the parking spots that are reserved and the parking spots that are available
 - Provides the parking lot attendant with real time parking space availability making it easier know how many drive up spaces can be sold.
 - Provides the parking lot attendant with a way of adding VIP/Donors to the system with a pending status that will grant them VIP privileges until their status is confirmed by an admin.
-- Parking space types: General, Handicap, and VIP/Donor
 
-### Advance Concession Stand Ordering
+### Advance Concession Ordering
 - Customers can order drinks, snacks, and/or merchandise for pickup before the show and/or durning intermission
-- Shortens time customers spend in line at the concession stand.
 - Provides customers with a unique order number that they can use to pick up their food.
 - Customer receives a link for updating order and checking status.
 - Concession stand order queue view for concession stand workers to see the food orders that need to be prepared.
@@ -79,7 +73,7 @@ The platform will allow customers to reserve a parking spot advance and after pa
 
 - Real time tracking of parking spots makes it easy for attendants to know how many "drive up" spots to sell, increasing the number of parking spots sold per show.
 
-- Increase the amount of concessions sold.
+### Increase the amount of concessions sold.
   * Encourages larger orders
   * Reduces wait times
   * Enhances the overall customer experience
@@ -87,14 +81,14 @@ The platform will allow customers to reserve a parking spot advance and after pa
   ```
   The No. 1 reason why fans like to use mobile ordering in stadiums? Avoiding waiting in concession lines (39%). 30% Americans responded “convenience of ordering food/beverage directly from their seat”, and 17% said mobile ordering “helps avoid contact with staff.”
   ```
-    - From: [VendingMarketWatch.com](https://www.vendingmarketwatch.com/technology/news/21163242/appetize-contactless-technology-survey-reveals-customer-trends-and-preferences)
-  
+  - From: [VendingMarketWatch.com](https://www.vendingmarketwatch.com/technology/news/21163242/appetize-contactless-technology-survey-reveals-customer-trends-and-preferences)
+
   ```
   In today's digital age, convenience is key. Implementing mobile ordering technology allows customers to browse the concession menu, place orders, and pay from their smartphones. This not only reduces wait times and enhances the overall customer experience but also encourages larger orders as customers can easily add items to their cart with a few taps. 
   ```
-    - From: [AgileTix.com](https://www.agiletix.com/post/lights-camera-snacks-7-ingenious-ways-theatres-can-boost-concession-sales), Citation: Appetize and SurveyMonkey. (2020, November 18). [Appetize Contactless Survey Reveals Customer Trends and Preferences](https://www.vendingmarketwatch.com/technology/news/21163242/appetize-contactless-technology-survey-reveals-customer-trends-and-preferences).
+  - From: [AgileTix.com](https://www.agiletix.com/post/lights-camera-snacks-7-ingenious-ways-theatres-can-boost-concession-sales), Citation: Appetize and SurveyMonkey. (2020, November 18). [Appetize Contactless Survey Reveals Customer Trends and Preferences](https://www.vendingmarketwatch.com/technology/news/21163242/appetize-contactless-technology-survey-reveals-customer-trends-and-preferences).
 
-- Increase the percentage of customers that order concessions per show.
+### Increase the percentage of customers that order concessions per show.
   
   ```
   The Demand for Contactless and Cashless Experiences
@@ -104,31 +98,31 @@ The platform will allow customers to reserve a parking spot advance and after pa
   
     * Customers love contactless ordering because of its convenience. Forty-four percent of Americans cited convenience as the most important factor for ordering and paying for food and merchandise with their phone.  
   ```
-    - From: [SoftJourn.com](https://softjourn.com/insights/5-reasons-to-add-contactless-ordering-to-your-ticketing-process)
+  - From: [SoftJourn.com](https://softjourn.com/insights/5-reasons-to-add-contactless-ordering-to-your-ticketing-process)
 
-- Increase and speed up concession sales during intermission.
-  - Customers will be able to put in intermission orders as soon as pre-show ordering closes. The advance orders will lighten the load on the lobby and lounge during intermission speeding up the process and providing a better experience for all customers.
+  - Increase and speed up concession sales during intermission.
+    - Customers will be able to put in intermission orders as soon as pre-show ordering closes. The advance orders will lighten the load on the lobby and lounge during intermission speeding up the process and providing a better experience for all customers.
 
 ### My Take on the Business Case
 
-- From my research on similar system adoption by other venues and experience as an employee at TCR I think it's reasonable to expect a 10% increase in concessions sold per show as a direct result of the system. This is based on the fact that the system will make it easier for customers to order and pay for concessions. Ordering systems like this inherently make it easier for customers to place larger and/or more complex orders compared to ordering at the counter which can lead to an increase in the average order size.
+  - From my research on similar system adoption by other venues and experience as an employee at TCR I think it's reasonable to expect a 10% increase in concessions sold per show as a direct result of the system. This is based on the fact that the system will make it easier for customers to order and pay for concessions. Ordering systems like this inherently make it easier for customers to place larger and/or more complex orders compared to ordering at the counter which can lead to an increase in the average order size.
 
-Current estimates are that 50% of a total of 550 customers order concessions at TCR. Assuming that the current average order is $12, 18% of the total customers use the advance ordering system (60% of these are in addition to the 50% overall order rate) and the average advance order is $15:
+  Current estimates are that 50% of a total of 550 customers order concessions at TCR. Assuming that the current average order is $12, 18% of the total customers use the advance ordering system (60% of these are in addition to the 50% overall order rate) and the average advance order is $15:
 
-* Current Concession Sales: 550 customers * 50% order rate * $12 average order = $3,300
-* Advance Order Sales: 550 customers * 18% advance order rate * $15 average order = $1,485
-* Total Concession Sales: $3,300 + $1,485 = $4,785
-* Increase in Concession Sales: $1,485 / $3,300 = 45%
+  * Current Concession Sales: 550 customers * 50% order rate * $12 average order = $3,300
+  * Advance Order Sales: 550 customers * 18% advance order rate * $15 average order = $1,485
+  * Total Concession Sales: $3,300 + $1,485 = $4,785
+  * Increase in Concession Sales: $1,485 / $3,300 = 45%
 
 ### Key Performance Indicators
-- Number of parking spots sold per show
-- Total sale of concessions per show
-- Number of customers that order concessions per show
+  - Number of parking spots sold per show
+  - Total sale of concessions per show
+  - Number of customers that order concessions per show
 
 ## Potential Future Features (Not in Scope or Estimate of this Phase)
-- Customer accounts, (profile, order history, etc.)
-  - Rewards program
-  - Discount/Coupon/Promo Codes (e.g. Sippy Cup Refill, Free Sticker with $30 order, etc.)
+  - Customer accounts, (profile, order history, etc.)
+    - Rewards program
+    - Discount/Coupon/Promo Codes (e.g. Sippy Cup Refill, Free Sticker with $30 order, etc.)
 
-- Inventory Management
-  - Track inventory of concessions and merchandise
+  - Inventory Management
+    - Track inventory of concessions and merchandise
