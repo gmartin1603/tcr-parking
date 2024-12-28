@@ -53,4 +53,12 @@
 * Technical support for system issues.
 * Priority & savings on feature requests and system enhancements.
 * Periodic system updates and security patches.
-* Starting at $500/year, price may vary based on system requirements and usage.
+* Starting at $500/year, cloud service usage limits outlined below.
+  - Active Users: 50k/month Then $60 per 10k users/month
+  - Hosting: 30GB/month
+  - Storage: 50GB
+  - Firestore Data: 50GB
+  - Backup Data: 150GB 
+  - Firestore Operations: 5M/month
+  - Functions Invocations: 50M/month
+
