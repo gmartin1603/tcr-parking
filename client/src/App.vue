@@ -7,13 +7,20 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <div class="logo-wrapper">
+      <img alt="TCR logo" 
+        src="https://www.theatrecr.org/wp-content/themes/tcr/images/theatre-cedar-rapids-logo.png?v=1.1.2"  
+        height="100" 
+      />
+    </div>
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <h1>TCR Parking and Ordering</h1>
+      <p>A platform for reserving preferred lot parking spaces and placing concession orders</p>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/menu">Menu</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
@@ -28,16 +35,17 @@ header {
   max-height: 100vh;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.logo-wrapper {
+  background-color: #ffffff;
+  padding: 0.5rem;
+  margin: 0.5rem 1rem 0.5rem 0;
 }
 
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  /* margin-top: 2rem; */
+  margin-top: 1rem;
 }
 
 nav a.router-link-exact-active {
