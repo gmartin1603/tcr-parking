@@ -4,43 +4,89 @@
 
     <div class="container">
       <!-- <h2>Menu</h2> -->
+      <div class="menu-tools">
+        <button id="add-cup-all" @click="addCupToAll = !addCupToAll">
+          Add Sippy Cup to All Drinks | {{ addCupToAll ? '✅' : '❌' }}
+        </button>
+
+      </div>
       <div class="menu">
         <div v-for="item in menuItems" :key="item.name" class="menu-item">
-          <img :src="`/images/${item.image}`"
-            height="50"
+          <h3>{{ item.name }}</h3>
+          <img :src="NotFound"
+            height="175"
+            width="175"
             alt="Item"
           />
           <div class="item-details">
-            <div class="item-title">
-              <h3>{{ item.name }}</h3>
-              <p>${{ item.price }}.00</p>
-            </div>
-            <select v-if="item.variants" class="variants">
+            <p class="item-price">${{ item.price }}.00</p>
+            <button class="cart-add" @click="handleAddToCart(item)">Add <CartIcon/></button>
+            <!-- <select v-if="item.variants" class="variants">
+              <option selected value="">Select a variant</option>
               <option v-for="variant in item.variants" :key="variant.name" class="variant">
                 {{ variant.name }}
               </option>
-            </select>
-            <button>Add to cart</button>
+            </select> -->
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Add Cup Modal -->
+    <div v-if="showCupModal">
+      <Modal :onClose="() => handleAddCup(null)">
+        <h2>Add Sippy Cup</h2>
+        <img :src="NotFound"
+            height="175"
+            width="175"
+            alt="Item"
+        />
+        <div class="add-cup-info">
+          <p>Would you like your drink in a collectable sippy cup for $3?</p>
+          <p>The collectable show themed sippy cup is yours to keep and refills are $1 off FOREVER!</p>
+          <p>Note: All drinks aside from water must be in a sippy cup to go into the theater.</p>
+        </div>
+        <div class="add-cup-actions">
+          <button id="yes" @click="handleAddCup(true)">Yes</button>
+          <button id="no" @click="handleAddCup(false)">No</button>
+          <button id="refill" @click="handleAddCup(null)">Refill</button>
+        </div>
+      </Modal>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import Modal from '../components/Modal.vue'
+import NotFound from '../assets/imageNotFound.jpg'
+import CartIcon from '../components/icons/IconCart.vue'
+
 const menuItems = [
   {
     name: 'Adult Signature Drink',
+    images: ['sippy-cup.jpg'],
+    type: 'drink',
     price: 12,
-    image: 'sippy-cup.jpg',
+  },
+  {
+    name: "Canned Soda",
+    variants: [
+      { name: 'Coke', image: 'coke.jpg' }, 
+      { name: 'Sprite', image: 'sprite.jpg' }
+    ],
+    images: ['@assets/imageNotFound.jpg'],
+    type: 'drink',
+    price: 3,
   },
   {
     name: 'Popcorn',
     variants: [
       { name: 'Carmel', image: 'carmel-popcorn.jpg' }, 
-      { name: 'Cheese', image: 'cheese-popcorn.jpg' }
+      { name: 'Cheese', image: '' }
     ],
+    image: '@assets/images/CheddarCheesePopcorn.jpg',
+    type: 'snack',
     price: 7,
   },
   {
@@ -49,6 +95,7 @@ const menuItems = [
       { name: 'Peanut', image: 'peanut-mms.jpg' }, 
       { name: 'Plain', image: 'plain-mms.jpg' }
     ],
+    type: 'snack',
     price: 4,
   },
   {
@@ -57,14 +104,77 @@ const menuItems = [
       { name: 'Red', image: 'red-button.jpg' }, 
       { name: 'Blue', image: 'blue-button.jpg' }
     ],
+    type: 'merch',
     price: 3,
   },
 ]
+
+const Constants = {
+  Discounts: {
+    RefillDiscount: 1,
+  },
+  Prices: {
+    SippyCup: 3
+  }
+}
+
+const addCupToAll = ref(false)
+
+let handleAddCup = null
+const showCupModal = ref(false)
+
+const showAddCupModal = async () => {
+  console.log('Show add cup modal')
+  return new Promise((resolve) => {
+    showCupModal.value = true
+    handleAddCup = (addCup) => {
+      showCupModal.value = false
+      resolve(addCup)
+    }
+  })
+}
+
+async function handleAddToCart(item) {
+  let addCup = false
+
+  if (item.type === 'drink' && !addCupToAll.value) {
+    console.log('Drink item:', item.name)
+    addCup = await showAddCupModal()
+  } else if (item.type === 'drink' && addCupToAll.value) {
+    addCup = true
+  }
+
+  let cartItems = []
+  
+  let cartItem = {
+      name: item.name,
+      price: item.price,
+      cup: "default"
+    }
+
+  if (addCup) {
+    cartItems.push({
+      name: 'Sippy Cup',
+      price: Constants.Prices.SippyCup,
+      drinkId: item.id
+    })
+    item.cup = "new"
+  } else if (addCup === null) {
+    cartItem.price = cartItem.price - Constants.Discounts.RefillDiscount
+    cartItem.cup = "refill"
+  }
+
+  cartItems.push(cartItem)
+
+  console.log('Cart item:', cartItems)
+}
+
 </script>
 
 <style>
 @media (min-width: 1024px) {
   .container {
+    user-select: none;
     min-height: 100vh;
     width: 100%;
   }
@@ -75,26 +185,117 @@ const menuItems = [
     justify-content: center;
   }
 
+  .menu-tools {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    #add-cup-all {
+      background-color: var(--color-secondary);
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }
+
   .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 1rem;
     padding: 1rem;
     border: 1px solid var(--color-border);
     border-radius: 0.5rem;
-    width: 300px;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .menu-item:hover {
+    box-shadow: 0 0 10px 0 rgba(240, 238, 238, 0.1);
+    transform: scale(1.05);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .menu-item {
+      width: 100%;
+    }
+    
   }
 
   .item-details {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column; */
+    align-items: flex-end;
     justify-content: space-between;
     margin-top: 1rem;
   }
-  .item-title {
+  .item-price {
+    font-size: 1rem;
+    margin: 0 auto 0 0.3rem;
+  }
+
+  .cart-add {
+    width: 50%;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .variants {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+
+  .add-cup-info {
+    margin-top: 1rem;
+    max-width: 300px;
+  }
+
+  .add-cup-actions {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    margin-top: 1rem;
+
+    #yes, #no, #refill {
+      width: 30%;
+      padding: 0.5rem;
+      border: 1px solid var(--color-border);
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yes {
+      background-color: var(--color-success);
+      color: white;
+    }
+
+    #no {
+      background-color: var(--color-danger);
+      color: white;
+    }
+
+    #refill {
+      background-color: var(--color-primary);
+      color: white;
+    }
   }
+
 }
 </style>

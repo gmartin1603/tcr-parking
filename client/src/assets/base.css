@@ -34,6 +34,13 @@
   --color-text: var(--vt-c-text-light-1);
 
   --section-gap: 160px;
+
+  --color-primary: #ff0077;
+  --color-secondary: #ff00ff;
+  --color-accent: #3c00ff;
+  --color-success: #01c501;
+  --color-warning: #ff8800;
+  --color-danger: #ff0000;
 }
 
 @media (prefers-color-scheme: dark) {
