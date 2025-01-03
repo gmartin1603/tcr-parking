@@ -11,49 +11,60 @@
 
       </div>
       <div class="menu">
-        <div v-for="item in menuItems" :key="item.name" class="menu-item">
+        <div v-for="item in menuItems" 
+          :key="item.name"
+          :id="item.id"
+          class="menu-item"
+          @click="(e) => handleClick(e, item)"
+        >
           <h3>{{ item.name }}</h3>
           <img :src="NotFound"
             height="175"
             width="175"
             alt="Item"
           />
-          <div class="item-details">
+          <div class="full-width row between mt-1">
             <p class="item-price">${{ item.price }}.00</p>
-            <button class="cart-add" @click="handleAddToCart(item)">Add <CartIcon/></button>
-            <!-- <select v-if="item.variants" class="variants">
-              <option selected value="">Select a variant</option>
-              <option v-for="variant in item.variants" :key="variant.name" class="variant">
-                {{ variant.name }}
-              </option>
-            </select> -->
+            <button id="card-btn" class="cart-add w-50" @click="(e) => handleClick(e, item)">Add <CartIcon/></button>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Add Cup Modal -->
-    <div v-if="showCupModal">
-      <Modal :onClose="() => handleAddCup(null)">
-        <h2>Add Sippy Cup</h2>
-        <img :src="NotFound"
-            height="175"
-            width="175"
-            alt="Item"
-        />
-        <div class="add-cup-info">
-          <p>Would you like your drink in a collectable sippy cup for $3?</p>
-          <p>The collectable show themed sippy cup is yours to keep and refills are $1 off FOREVER!</p>
-          <p>Note: All drinks aside from water must be in a sippy cup to go into the theater.</p>
-        </div>
-        <div class="add-cup-actions">
-          <button id="yes" @click="handleAddCup(true)">Yes</button>
-          <button id="no" @click="handleAddCup(false)">No</button>
-          <button id="refill" @click="handleAddCup(null)">Refill</button>
-        </div>
-      </Modal>
-    </div>
   </div>
+  
+  <!-- Add Cup Modal -->
+  <div v-if="showCupModal">
+    <Modal :onClose="() => handleAddCup(null)">
+      <h2>Add Sippy Cup</h2>
+      <img :src="NotFound"
+          height="175"
+          width="175"
+          alt="Item"
+      />
+      <div class="add-cup-info">
+        <p>Would you like your drink in a collectable sippy cup for $3?</p>
+        <p>The collectable show themed sippy cup is yours to keep and refills are $1 off FOREVER!</p>
+        <p>Note: All drinks aside from water must be in a sippy cup to go into the theater.</p>
+      </div>
+      <div class="add-cup-actions">
+        <button id="yes" @click="handleAddCup(true)">Yes</button>
+        <button id="no" @click="handleAddCup(false)">No</button>
+        <button id="refill" @click="handleAddCup(null)">Refill</button>
+      </div>
+    </Modal>
+  </div>
+
+  <!-- Item Details Modal -->
+  <div v-if="showDetails">
+    <Modal showClose :onClose="() => showDetails = false">
+      <ItemDetailsModal 
+        :item="details"
+        :addCup="addCupToAll"
+        :addToCart="handleAddToCart" 
+      />
+    </Modal>
+  </div>
+  
 </template>
 
 <script setup>
@@ -61,50 +72,59 @@ import { ref } from 'vue'
 import Modal from '../components/Modal.vue'
 import NotFound from '../assets/imageNotFound.jpg'
 import CartIcon from '../components/icons/IconCart.vue'
+import ItemDetailsModal from '@/components/MenuView/ItemDetailsModal.vue'
 
 const menuItems = [
   {
+    id: 1,
     name: 'Adult Signature Drink',
+    description: "Lumiare's Berry Sparkler is a refreshing mix of blackberry liquor, Titos vodka, Amerretto, and Sweet & Sour mix with sprite poured on top. ",
     images: ['sippy-cup.jpg'],
-    type: 'drink',
+    tags: ['drink', 'alcohol'],
     price: 12,
   },
   {
+    id: 2,
     name: "Canned Soda",
+    description: "Choose from Coke, Diet Coke, Sprite, or Water",
     variants: [
       { name: 'Coke', image: 'coke.jpg' }, 
       { name: 'Sprite', image: 'sprite.jpg' }
     ],
     images: ['@assets/imageNotFound.jpg'],
-    type: 'drink',
+    tags: ['drink'],
     price: 3,
   },
   {
+    id: 3,
     name: 'Popcorn',
+    description: "Choose one (or a few) delicious Almost Famous Popcorn flavors to enjoy during the show.",
     variants: [
       { name: 'Carmel', image: 'carmel-popcorn.jpg' }, 
       { name: 'Cheese', image: '' }
     ],
     image: '@assets/images/CheddarCheesePopcorn.jpg',
-    type: 'snack',
+    tags: ['snack'],
     price: 7,
   },
   {
+    id: 4,
     name: 'M&Ms',
     variants: [
       { name: 'Peanut', image: 'peanut-mms.jpg' }, 
       { name: 'Plain', image: 'plain-mms.jpg' }
     ],
-    type: 'snack',
+    tags: ['snack'],
     price: 4,
   },
   {
+    id: 5,
     name: '{SHOW_NAME} Button',
     variants: [
       { name: 'Red', image: 'red-button.jpg' }, 
       { name: 'Blue', image: 'blue-button.jpg' }
     ],
-    type: 'merch',
+    tags: ['merch'],
     price: 3,
   },
 ]
@@ -118,12 +138,23 @@ const Constants = {
   }
 }
 
-const addCupToAll = ref(false)
+const details = ref(null)
 
-let handleAddCup = null
+const addCupToAll = ref(false)
 const showCupModal = ref(false)
 
-const showAddCupModal = async () => {
+let handleAddCup = null
+
+function handleClick(e, item) {
+  console.log(e.target.id)
+  if (e.target.id === 'card-btn') {
+    handleAddToCart(item)
+  } else {
+    openDetails(item)
+  }
+}
+
+async function showAddCupModal() {
   console.log('Show add cup modal')
   return new Promise((resolve) => {
     showCupModal.value = true
@@ -137,10 +168,10 @@ const showAddCupModal = async () => {
 async function handleAddToCart(item) {
   let addCup = false
 
-  if (item.type === 'drink' && !addCupToAll.value) {
+  if (item.tags.includes('drink') && !addCupToAll.value) {
     console.log('Drink item:', item.name)
     addCup = await showAddCupModal()
-  } else if (item.type === 'drink' && addCupToAll.value) {
+  } else if (item.tags.includes('drink') && addCupToAll.value) {
     addCup = true
   }
 
@@ -167,6 +198,16 @@ async function handleAddToCart(item) {
   cartItems.push(cartItem)
 
   console.log('Cart item:', cartItems)
+
+  showDetails.value = false
+}
+
+const showDetails = ref(false)
+
+function openDetails(item) {
+  console.log('Open details:', item)
+  showDetails.value = true
+  details.value = item
 }
 
 </script>
@@ -226,21 +267,7 @@ async function handleAddToCart(item) {
     
   }
 
-  .item-details {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-top: 1rem;
-  }
-  .item-price {
-    font-size: 1rem;
-    margin: 0 auto 0 0.3rem;
-  }
-
   .cart-add {
-    width: 50%;
     background-color: var(--color-primary);
     color: white;
     border: none;
@@ -251,14 +278,6 @@ async function handleAddToCart(item) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .variants {
-    width: 100%;
-    margin-top: 1rem;
-    padding: 0.5rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0.5rem;
   }
 
   .add-cup-info {

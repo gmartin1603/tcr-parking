@@ -38,6 +38,7 @@ const props = defineProps({
   }
 
   .modal {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,5 +46,12 @@ const props = defineProps({
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0.8rem;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 </style>

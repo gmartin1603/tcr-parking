@@ -15,6 +15,72 @@ a,
   padding: 3px;
 }
 
+select {
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.ml-05 {
+  margin-left: 0.5rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.floor {
+  align-items: flex-end;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.ceiling {
+  align-items: flex-start;
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
