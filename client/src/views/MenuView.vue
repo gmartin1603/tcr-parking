@@ -69,6 +69,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useCartStore } from '@/stores/cart'
 import Modal from '../components/Modal.vue'
 import NotFound from '../assets/imageNotFound.jpg'
 import CartIcon from '../components/icons/IconCart.vue'
@@ -138,6 +139,7 @@ const Constants = {
   }
 }
 
+const cartStore = useCartStore()
 const details = ref(null)
 
 const addCupToAll = ref(false)
@@ -180,7 +182,8 @@ async function handleAddToCart(item) {
   let cartItem = {
       name: item.name,
       price: item.price,
-      cup: "default"
+      cup: "default",
+      quantity: 1,
     }
 
   if (addCup) {
@@ -198,6 +201,7 @@ async function handleAddToCart(item) {
   cartItems.push(cartItem)
 
   console.log('Cart item:', cartItems)
+  cartStore.addRange(cartItems)
 
   showDetails.value = false
 }

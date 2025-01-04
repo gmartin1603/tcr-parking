@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
+import DocumentationIcon from './icons/IconPlus.vue'
 import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
+import EcosystemIcon from './icons/IconMinus.vue'
 import CommunityIcon from './icons/IconCart.vue'
 import SupportIcon from './icons/IconSupport.vue'
 

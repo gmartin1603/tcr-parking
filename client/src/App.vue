@@ -24,9 +24,7 @@
 
   <div v-if="cartModalOpen">
       <Modal showClose :onClose="() => closeModal()">
-        <h2>Order Cart</h2>
-        <p>Order cart content goes here</p>
-        <!-- <OrderCart/> -->
+        <OrderCartModal/>
       </Modal>
     </div>
 
@@ -37,6 +35,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import CartIcon from './components/icons/IconCart.vue'
 import { ref } from 'vue';
+import OrderCartModal from './components/OrderCartModal.vue';
 import Modal from './components/Modal.vue';
 
 const cartModalOpen = ref(false)
