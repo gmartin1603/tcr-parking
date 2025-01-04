@@ -23,10 +23,10 @@
   </header>
 
   <div v-if="cartModalOpen">
-      <Modal showClose :onClose="() => closeModal()">
-        <OrderCartModal/>
-      </Modal>
-    </div>
+    <Modal showClose :onClose="() => closeModal()">
+      <OrderCartModal/>
+    </Modal>
+  </div>
 
   <RouterView />
 </template>

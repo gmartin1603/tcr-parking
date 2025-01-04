@@ -1,5 +1,5 @@
 <template>
-  <div class="order-cart-modal">
+  <div class="order-cart-modal full-width">
     <h2>Order Cart</h2>
     <div v-if="cart.length === 0">
       <p>Your cart is empty</p>
@@ -27,7 +27,7 @@
           > 
             <MinusIcon/> 
           </button> 
-          <button @click="removeItem(item)">Remove</button>
+          <button class="remove-btn" @click="removeItem(item)">Remove</button>
         </div>
       </div>
       <div class="cart-actions">
@@ -81,10 +81,22 @@ function checkout() {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .cart-item-info {
   flex: 1;
+}
+
+.remove-btn {
+  height: 30px;
+  background-color: var(--color-danger);
+  color: white;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .item-actions {

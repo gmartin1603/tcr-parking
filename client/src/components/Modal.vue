@@ -38,6 +38,7 @@ const props = defineProps({
   }
 
   .modal {
+    width: auto;
     position: relative;
     display: flex;
     flex-direction: column;
